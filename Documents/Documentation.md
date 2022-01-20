@@ -46,7 +46,7 @@ Since we are dealing with image classification the best course of action is to u
 ![alt text](../Images/test3.png)
 ---
 [Video demonstration](https://www.youtube.com/watch?v=qaCLV4Y_H3M)
----
+
 ## Tools
 * Colab : mostly used to handle GPU intensive tasks
 * Pandas: Data Cleaning and manipulation
