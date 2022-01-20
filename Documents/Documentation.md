@@ -13,3 +13,44 @@ All images are 1920x1200 (download size ~3.1 GB). We have also provided a versio
 ## Algorithm
 * Data manipulation and cleaning
     * Applied feature Selection by dropping unnecessary columns.
+    * Applied feature reduction due to computational limitations and selected 100 stratified images out of 15000 images.
+
+* After applying the previous steps to prepare the dataset, we end up with:
+   * Images for Training.
+   * Images for Validation.
+   * Images for Testing.
+
+* To train our detector we take the following steps:
+   * Install YOLOv5 dependencies
+   * Download custom YOLOv5 object detection data
+   * Write our YOLOv5 Training configuration
+   * Run YOLOv5 training
+   * Evaluate YOLOv5 performance
+   * Visualize YOLOv5 training data
+   * Run YOLOv5 inference on test images
+   * Export saved YOLOv5 weights for future inference
+
+* The YOLO network consists of three main pieces:
+   * Backbone - A convolutional neural network that aggregates and forms image features at different granularities.
+   * Neck - A series of layers to mix and combine image features to pass them forward to prediction.
+   * Head - Consumes features from the neck and takes box and class prediction steps.
+   ![alt text](../Images/yolov5_algorithm.png "yolov5 algorithm")
+
+## Model Evaluation and Selection
+Since we are dealing with image classification the best course of action is to use convolutional neural networks since it’s very effective in reducing the number of parameters without losing on the quality of models. Images have high dimensionality (as each pixel is considered as a feature). YOLO algorithm employs convolutional neural networks (CNN) to detect objects in real-time. As the name suggests, the algorithm requires only a single forward propagation through a neural network to detect objects. This means that prediction in the entire image is done in a single algorithm run
+
+![alt text](../Images/test1)
+---
+![alt text](../Images/test2)
+---
+![alt text](../Images/test3)
+---
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=qaCLV4Y_H3M)
+
+## Tools
+* Colab : mostly used to handle GPU intensive tasks
+* Pandas: Data Cleaning and manipulation
+* NumPy: Mathematical operations
+* TensorFlow: Deep Learning
+* Seaborn: Data Visualization
+* Sklera: Testing the results
